@@ -1,0 +1,28 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "DataLakePrincipalIdentifier": "arn:aws:iam::123456789012:role/HealthcareDataLakeRole"
+      },
+      "Action": [
+        "lakeformation:GetDataAccess",
+        "lakeformation:GrantPermissions",
+        "lakeformation:RevokePermissions"
+      ],
+      "Resource": "arn:aws:glue:us-east-1:123456789012:catalog"
+    },
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "DataLakePrincipalIdentifier": "arn:aws:iam::123456789012:user/HealthcareAdmin"
+      },
+      "Action": [
+        "lakeformation:ListPermissions",
+        "lakeformation:DescribeResource"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

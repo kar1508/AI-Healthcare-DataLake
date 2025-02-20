@@ -1,0 +1,26 @@
+{
+  "Dashboard": {
+    "Name": "Healthcare Anomaly Dashboard",
+    "DataSources": [
+      {
+        "Type": "ATHENA",
+        "Arn": "arn:aws:quicksight:us-east-1:123456789012:datasource/HealthcareAthenaSource"
+      }
+    ],
+    "Visuals": [
+      {
+        "Type": "Table",
+        "Title": "Anomalous Patient Readings",
+        "Columns": ["patient_id", "heart_rate", "oxygen_level", "temperature", "fraud_risk"],
+        "Sort": {"fraud_risk": "DESC"}
+      },
+      {
+        "Type": "LineChart",
+        "Title": "Heart Rate Over Time",
+        "X-Axis": "timestamp",
+        "Y-Axis": "heart_rate",
+        "Filter": {"heart_rate": {"greater_than": 110}}
+      }
+    ]
+  }
+}
