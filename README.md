@@ -92,11 +92,7 @@ aws quicksight create-dashboard --cli-input-json file://visualization/quicksight
 ```
 
 ## **Contributors**
-- **Your Name** – Developer & Architect
+- karthikeya R – Developer & Architect
 
-## **License**
-This project is licensed under the MIT License.
 
----
-Let me know if you need any modifications! 🚀
 
